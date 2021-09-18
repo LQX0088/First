@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">First</string>
+    <string name="btn1_label1">姓名</string>
+    <string name="btn1_label2">用户</string>
+    <string name="text1">请输入身高（米）</string>
+    <string name="text2">请输入体重（千克）</string>
+</resources>

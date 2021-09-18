@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="350dp"
+        android:background="#F3F2F2"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="TEAM A"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/point1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:onClick="myClick1"
+                android:text="+1 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:onClick="myClick1"
+                android:text="+2 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="myClick1"
+                android:gravity="center"
+                android:text="+3 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="TEAM B"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/point2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="myClick2"
+                android:gravity="center"
+                android:text="+1 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:onClick="myClick2"
+                android:text="+2 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="myClick2"
+                android:gravity="center"
+                android:text="+3 point"
+                android:textSize="20dp"
+                app:backgroundTint="#CF8F8F" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginBottom="184dp"
+        android:text="RESET"
+        android:textSize="20dp"
+        android:onClick="myClick3"
+        app:backgroundTint="#82BAC3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
