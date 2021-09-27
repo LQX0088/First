@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.time.LocalDate;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView outputpoint;
     TextView outputpoint1;
     TextView outputpoint2;
+    TextView outputmoney;
     int point;
     int point1;
     int point2;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ball2);
+        setContentView(R.layout.first);
 
 //        output=findViewById(R.id.textView);//获得控件
 //        output.setText("BMI计算器");
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 //        output.setText("BMI指数为:"+String.valueOf(df.format(bmi))+'\n'+advice);
 //    }
 //}
+    //ball2
     public void myClick1(View btn) {
         outputpoint = findViewById(R.id.point1);
         point = Integer.parseInt(outputpoint.getText().toString());
@@ -111,4 +114,7 @@ public class MainActivity extends AppCompatActivity {
         outputpoint2.setText(String.valueOf(0));
 
     }
+
+
+
 }

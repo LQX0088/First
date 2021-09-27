@@ -70,8 +70,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="10dp"
-                android:onClick="myClick1"
                 android:gravity="center"
+                android:onClick="myClick1"
                 android:text="+3 point"
                 android:textSize="20dp"
                 app:backgroundTint="#CF8F8F" />
@@ -109,8 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="10dp"
-                android:onClick="myClick2"
                 android:gravity="center"
+                android:onClick="myClick2"
                 android:text="+1 point"
                 android:textSize="20dp"
                 app:backgroundTint="#CF8F8F" />
@@ -133,8 +133,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="10dp"
-                android:onClick="myClick2"
                 android:gravity="center"
+                android:onClick="myClick2"
                 android:text="+3 point"
                 android:textSize="20dp"
                 app:backgroundTint="#CF8F8F" />
