@@ -2,10 +2,14 @@ package com.swufe.stu.first;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
+//汇率转换修改汇率页面
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -40,13 +44,22 @@ public class MainActivity3 extends AppCompatActivity {
         double pound=Double.parseDouble(poundText.getText().toString());
         double euro=Double.parseDouble(euroText.getText().toString());
 
-        Intent first=getIntent();
-        first.putExtra("dollar_key",dollar);
-        first.putExtra("pound_key",pound);
-        first.putExtra("euro_key",euro);
+//        Intent first=getIntent();
+//        first.putExtra("dollar_key",dollar);
+//        first.putExtra("pound_key",pound);
+//        first.putExtra("euro_key",euro);
+
+        //在save时保存数据到文件中
+        SharedPreferences sp=getSharedPreferences("myrate", Activity.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor= sp.edit();
+        editor.putFloat("new_dollar",(float) dollar);
+        editor.putFloat("new_pound",(float) pound);
+        editor.putFloat("new_euro",(float) euro);
+        editor.apply();
 
 
-        setResult(1,first);
-        finish();
+        //setResult(1,first);
+        finish();//退回原来界面
     }
 }
