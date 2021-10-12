@@ -20,6 +20,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -30,6 +35,7 @@ import java.net.URL;
 
 //汇率转换主界面
 public class MainActivity2 extends AppCompatActivity implements Runnable {
+    
 
     private static final String TAG = "wwww";
     TextView output;
@@ -160,11 +166,26 @@ public class MainActivity2 extends AppCompatActivity implements Runnable {
         //获取网络数据
         URL url = null;
         try {
-            url = new URL("https://www.usd-cny.com/bankofchina.htm");
-            HttpURLConnection http = (HttpURLConnection) url.openConnection();
-            InputStream in = http.getInputStream();
-            String html = inputStream2String(in);
-            Log.i(TAG, "run: html=" + html);
+//            url = new URL("https://www.usd-cny.com/bankofchina.htm");
+//            HttpURLConnection http = (HttpURLConnection) url.openConnection();
+//            InputStream in = http.getInputStream();
+//            String html = inputStream2String(in);
+//            Log.i(TAG, "run: html=" + html);
+
+            Document doc=Jsoup.connect("https://www.usd-cny.com/bankofchina.htm").get();
+            Log.i(TAG, "run: title:"+doc.title());
+            Elements h4s=doc.getElementsByTag("h4");
+            for(Element h4:h4s){
+                Log.i(TAG, "run:h4:"+h4.text());
+            }
+
+            Elements tables=doc.getElementsByTag("table");
+            Element table1=tables.first();
+            Log.i(TAG, "run: table"+table1);
+            Elements hrefs=table1.getElementsByTag("hrefs");
+            for(Element tr:hrefs){
+                Log.i(TAG, "run: hrefs="+hrefs.text());
+            }
 
 
         } catch (MalformedURLException e) {
@@ -172,6 +193,8 @@ public class MainActivity2 extends AppCompatActivity implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
         //发送消息给主线程
         Message msg = handler.obtainMessage();
         msg.what = 6;
@@ -182,6 +205,7 @@ public class MainActivity2 extends AppCompatActivity implements Runnable {
 
     }
 
+    //获取界面内容
     private String inputStream2String(InputStream inputStream)
             throws IOException {
         final int buffersize = 1024;

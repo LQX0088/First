@@ -73,5 +73,6 @@
             android:onClick="openOne"
             android:layout_margin="10dp"
             android:textSize="30dp"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

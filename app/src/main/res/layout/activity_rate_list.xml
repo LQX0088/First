@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
+    tools:context=".RateListActivity">
 
+    <ListView
+        android:id="@+id/mylist1"
+        android:layout_width="495dp"
+        android:layout_height="735dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="120dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
