@@ -1,5 +1,5 @@
 package com.swufe.stu.first;
-
+//解析中国银行汇率 继承list类产生列表
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +10,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -38,6 +41,7 @@ public class RateListChinaActivity extends ListActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        ListView listView=(ListView)findViewById(R.id.mylist1);
         List<String> list1=new ArrayList<String>();
         for (int i=1;i<100;i++){
             list1.add("item"+i);
@@ -50,6 +54,7 @@ public class RateListChinaActivity extends ListActivity implements Runnable {
                     ArrayList<String> rlist=(ArrayList<String>) msg.obj;
                     ListAdapter adapter=new ArrayAdapter<String>(RateListChinaActivity.this, android.R.layout.simple_list_item_1,rlist);
                     setListAdapter(adapter);
+
                 }
 
                 super.handleMessage(msg);

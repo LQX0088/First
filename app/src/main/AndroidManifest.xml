@@ -13,6 +13,24 @@
         android:theme="@style/Theme.First"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RateHttpActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RateList2Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".RateListChinaActivity"
             android:exported="true">
             <intent-filter>
