@@ -19,21 +19,25 @@ import java.util.Map;
 public class MyAdapter extends ArrayAdapter {
     private static final String TAG="MyAdapter";
 
-    public MyAdapter(@NonNull Context context, int resource, @NonNull ArrayList<HashMap<String,String>> data){
+    public MyAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Item> data){
         super(context,resource,data);
     }
+    @Override
     public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent){
         View itemView=convertView;
         if(itemView==null){
             itemView= LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
         }
 
-        Map<String,String> map=(Map<String, String>) getItem(position);
+//        Map<String,String> map=(Map<String, String>) getItem(position);
+        Item item=(Item)getItem(position);
         TextView title=(TextView) itemView.findViewById(R.id.itemTitle);
         TextView detail=(TextView) itemView.findViewById(R.id.itemDetail);
 
-        title.setText(map.get("cname"));
-        detail.setText(map.get("cval"));
+//        title.setText(map.get("cname"));
+//        detail.setText(map.get("cval"));
+        title.setText(item.getCname());
+        detail.setText(item.getCval());
 
         return itemView;
     }
